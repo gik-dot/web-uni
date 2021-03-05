@@ -104,3 +104,41 @@ $table .= '</table>';
 echo $table; // сделали эхо всего 1 раз
 ?>
 </blockquote>
+
+<!--Задание №11-->
+<blockquote>
+<?php $leftMenu = [
+  ['link'=>'Таблица', 'href'=>'table.php']
+  ];?>
+			<h2>Навигация по сайту</h2>
+			<!-- Меню -->
+			<?php
+					foreach ($leftMenu as $item) { // $item - внутренний массив
+						echo "<ul>";
+							echo "<li>";
+								echo "<a href='{$item['href']}'> {$item['link']} </a>"; 
+							echo "</li>";
+						echo "</ul>";
+					}
+?>
+</blockquote>
+
+<!--Задание №12-->
+<blockquote>
+<?php
+    function drawTable ($cols, $rows, $color){
+      echo "<table border='2' bgcolor = '$color'>";
+      for ($tr=1; $tr<=$rows; $tr++){ 
+          echo '<tr>';
+          for ($td=1; $td<=$cols; $td++){ 
+              echo '<td>'. $tr*$td .'</td>';
+          }
+          echo '</tr>';
+      }
+      echo '</table>';
+      }
+?>
+<?php
+  drawTable (10, 10, 'gray');
+?>
+</blockquote>
