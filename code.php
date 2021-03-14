@@ -48,7 +48,7 @@ $leftMenu = ['home'=>'index.php','about'=>'about.php','contacts'=>'contact.php']
 </blockquote>
 
 <!--Задание №7-->
-<<>
+<blockquote>
 <?php $leftMenu = [
   ['link'=>'Домой', 'href'=>'index.php'],
   ['link'=>'О нас', 'href'=>'about.php'],
@@ -57,7 +57,7 @@ $leftMenu = ['home'=>'index.php','about'=>'about.php','contacts'=>'contact.php']
 <li><a href='<?= $leftMenu[0]['href']?>'><?= $leftMenu[0]['link']?></a></li>
 <li><a href='<?= $leftMenu[1]['href']?>'><?= $leftMenu[1]['link']?></a></li>
 <li><a href='<?= $leftMenu[2]['href']?>'><?= $leftMenu[2]['link']?></a></li>
-</>
+</blockquote>
 
 <!--Задание №8-->
 <blockquote>
