@@ -1,7 +1,13 @@
 <?php 
 $title = 'Наш сайт';
+$welcome = "Добро пожаловать";
 $header = "$welcome, Гость!";
-$id = strtolower(strip_tags(trim($_GET['id']))); ?>
+$id = '';
+	if (!empty($_GET['id']))
+	{
+		$id = strtolower(strip_tags(trim($_GET['id']))); 
+	}
+?>
 
 <?php include "data.inc.php" ?> 
 <?php include "lib.inc.php" ?> 
@@ -24,7 +30,7 @@ $id = strtolower(strip_tags(trim($_GET['id']))); ?>
 
 		<div id="content"> 
 
-		<h1><? = $header ?></h1>
+		<h1><?= $header ?></h1>
 			<?php switch($id)
 			{
 				case 'about': include 'about.php'; 
@@ -33,7 +39,6 @@ $id = strtolower(strip_tags(trim($_GET['id']))); ?>
 				break;
 				case 'table_exp': include 'table_exp.php';
 				break;
-
 				case 'mission_1': include 'mission_1.php';
 				break;
 				case 'mission_2': include 'mission_2.php';
@@ -60,6 +65,7 @@ $id = strtolower(strip_tags(trim($_GET['id']))); ?>
 		</div>
 
 		<div id="nav">
+		<h2>Навигация по сайту</h2>
 		<?php include "menu.inc.php" ?> 
 		</div>
 

@@ -1,7 +1,4 @@
-<div id="content">
-
-<!-- Навигация -->
-<h2>Навигация по сайту</h2>
+<div>
     <?php
       drawmenu($leftmenu,true);
     ?>

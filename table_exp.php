@@ -1,5 +1,5 @@
 	<?php include "table.inc.php" ?>	
-	<div id="content">
+	<div>
 
 				<form action='' method="POST">
 
@@ -11,7 +11,7 @@
 		</form>
 
 				<?php
-					drawTable (0, 0, 'white');
+				if (!empty($_POST['cols']) && !empty($_POST['rows']) && !empty($_POST['color']))
   				drawTable ($cols=$_POST['cols'], $rows=$_POST['rows'], $color=$_POST['color']);	
 				?>
 
